@@ -34,12 +34,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    base44({
-      hmrNotifier: true,
-      navigationNotifier: true,
-      analyticsTracker: true,
-      visualEditAgent: true,
-    }),
+ 
     // No inspector: a restarted dev server would race the old one for port 9229 and crash.
     cloudflare({ viteEnvironment: { name: "ssr" }, inspectorPort: false }),
     tanstackStart({ srcDirectory: "src" }),
